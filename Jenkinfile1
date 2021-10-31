@@ -47,7 +47,7 @@ pipeline{
 		  sh 'cp -r ../jenkins@2/target .'
                   sh 'docker build . -t nareshboreddy/devops-training:$Docker_tag'
 		  withCredentials([string(credentialsId: 'docker_password1', variable: 'docker_password')]) {			    
-				  sh 'docker login -u nareshboreddy -p $docker_password'
+				  sh 'docker login -u nareshboreddy -p  Ramadevi1234'
 				  sh 'docker push nareshboreddy/devops-training:$Docker_tag'
 			}
                        }
